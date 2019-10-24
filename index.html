@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sopa de letras</title>
+	<link rel="stylesheet" type="text/css" href="css/wordfind.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="scss/styleOut.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/wordfind.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- MODAL DE INICIO -->
+    <div class="modal l-center-both show"> <!-- show -->
+        <div class="modal__content l-row l-center-both">
+            <div class="l-col l-center-both l-expand">
+                <div class="modal__img--start modal__img--alizu kid1">
+                    <img src="./assets/a.png" alt="">
+                </div>
+            </div>
+              
+            <div class="l-col l-center-both l-expand">
+                <div class="btn btn--start j-play-instructions l-center-both">
+                    <div class="l-row">
+                        <div class="btn--start--icon l-center-both">
+                            <img src="./assets/loginiciciar.svg" alt="">
+                        </div>
+                        <div class="btn--start--text l-center-both">
+                            <span>Iniciar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+            <div class="l-col l-center-both l-expand">
+                <div class="modal__img--start modal__img--tocotolile kid2">
+                    <img src="./assets/b.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <!-- MODAL DE REINICIO -->
+    <div class="modal modal--finishing l-center-both ">
+        <div class="modal__content l-row">
+            <div class="l-col">
+                <div class="modal__img--restart modal__img--alizu-1">
+                    <img src="./assets/M.png" alt="">
+                </div>
+            </div>
+
+            <div class="l-col l-justify-evenly">
+                <div class="modal__img--restart modal__img--positive">
+                    <img src="./assets/muybien.png" alt="">
+                </div>
+          
+                <div class="btn btn--restart l-center-both"> 
+                    <img src="./assets/replay.svg" alt=""> Reiniciar
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- INSTRUCCIONES -->
+    <div class="main-wrapper l-col">
+        <!-- 
+            <div>   
+                <button id="solve">Resolver el juego</button>
+            </div> 
+        -->
+        <div class="instructions">
+            <div class="btn btn--repeat l-center-both">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="btn__icon" id="Capa_1" x="0px" y="0px" viewBox="0 0 486.547 486.547" xml:space="preserve">
+                <path class="btn__icon--color" d="M251.568,68.851c-6.199,0-11.56,2.264-16.083,6.787l-118.991,76.164H22.871c-6.2,0-11.561,2.265-16.083,6.787    C2.258,163.117,0,168.472,0,174.665v137.217c0,6.199,2.264,11.561,6.787,16.083c4.522,4.529,9.884,6.787,16.083,6.787h93.624    l118.998,76.157c4.522,4.529,9.883,6.787,16.083,6.787c6.193,0,11.549-2.265,16.078-6.787c4.521-4.522,6.787-9.884,6.787-16.083    V91.721c0-6.193-2.266-11.555-6.787-16.083C263.117,71.121,257.762,68.851,251.568,68.851z"/>
+                <path class="btn__icon--color" d="M379.881,293.84c10.123-15.6,15.184-32.454,15.184-50.563c0-18.103-5.061-35.019-15.184-50.741    c-10.129-15.722-23.525-26.8-40.203-33.232c-2.387-1.187-5.361-1.787-8.934-1.787c-6.201,0-11.555,2.203-16.078,6.609    c-4.529,4.413-6.787,9.829-6.787,16.261c0,5,1.432,9.235,4.291,12.687c2.857,3.458,6.309,6.432,10.359,8.935    c4.047,2.503,8.098,5.245,12.148,8.219c4.047,2.98,7.504,7.209,10.361,12.687c2.859,5.484,4.291,12.271,4.291,20.367    c0,8.104-1.432,14.891-4.291,20.368c-2.857,5.483-6.314,9.712-10.361,12.687c-4.051,2.98-8.102,5.716-12.148,8.219    c-4.051,2.503-7.502,5.483-10.359,8.936c-2.859,3.458-4.291,7.681-4.291,12.687c0,6.433,2.264,11.854,6.787,16.261    c4.523,4.413,9.883,6.609,16.076,6.609c3.574,0,6.549-0.594,8.936-1.787C356.355,320.584,369.752,309.446,379.881,293.84z"/>
+                <path class="btn__icon--color" d="M375.773,74.97c-3.096-1.187-6.199-1.787-9.289-1.787c-6.199,0-11.561,2.265-16.084,6.787    c-4.529,4.529-6.787,9.89-6.787,16.083c0,9.29,4.645,16.322,13.936,21.083c13.342,6.916,22.387,12.148,27.16,15.722    c17.625,12.864,31.383,29.003,41.273,48.421c9.885,19.419,14.828,40.08,14.828,61.996c0,21.922-4.943,42.583-14.828,62.002    c-9.891,19.419-23.646,35.557-41.273,48.421c-4.768,3.574-13.818,8.813-27.16,15.723c-9.291,4.768-13.936,11.793-13.936,21.083    c0,6.2,2.266,11.562,6.787,16.084c4.523,4.528,10.006,6.787,16.439,6.787c2.857,0,5.832-0.594,8.934-1.787    c33.348-14.052,60.148-36.506,80.398-67.356c20.246-30.852,30.375-64.499,30.375-100.95c0-36.45-10.129-70.092-30.375-100.949    C435.922,111.476,409.121,89.028,375.773,74.97z"/>
+                </svg>
+            </div>
+
+            <h3 class="instructions__main">
+                <div class="instructions__emphasis">
+                    <span>Encuentra en la </span>
+                </div>
+                <div class="instructions__letter instructions__letter--recurso01-e">
+                    <span>S</span>
+                </div>
+                opa de letras los nombres de los 
+                <div class="instructions__letter instructions__letter--recurso01-a">
+                    <span>M</span>
+                </div>
+                eses del año.
+            </h3>
+        </div>
+    
+        <div class="interactive-box">
+            <canvas class="confetti"></canvas>
+            
+            <div id="holder" class="l-row">
+                <div id="Playfield" class="ImagenFond l-expand">
+                    <div id="Tablero" class="l-expand">
+                        <!-- PUZZLE -->
+                        <div id="puzzle" class="l-expand"></div> <!-- style="display: none;" -->
+                        <!-- <div>
+                            <button class="word">Enero</button>
+                            <button class="word">Febrero</button>
+                            <button class="word">Marzo</button>
+                            <button class="word">Abril</button>
+                            <button class="word">Mayo</button>
+                            <button class="word">Junio</button>
+                            <button class="word">Julio</button>
+                            <button class="word">Agosto</button>
+                            <button class="word">Septiembre</button>
+                            <button class="word">Octubre</button>
+                            <button class="word">Noviembre</button>
+                            <button class="word">Noviembre</button>
+                            <button class="word">Diciembre</button>
+                        </div> -->
+                    </div>
+                    <div id="worlds" class="l-expand"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div>
+        <input type="text" id="colorDisponibles" style="display: none;">
+        <input type="text" id="color" style="display: none;">
+        <input type="text" id="audio" style="display: none;">
+    </div>
+
+    <!-- AUDIO DE INSTRUCCIONES -->
+    <audio class="audio-instructions" autoplay muted>
+        <source src="assets/PATRON_01_RECURSO_01.mp3" type="audio/mpeg" > <!-- AUDIO DE INSTRUCCIONES -->
+    </audio>
+    
+    <!-- AUDIO CORRECTO -->
+    <audio class="audio-success">
+        <source src="assets/success.m4a" >
+    </audio>
+
+    <!-- AUDIO ENERO -->
+    <audio class="audio-enero">
+        <source src="assets/enero.mp3" >
+    </audio>
+
+    <!-- AUDIO FEBRERO -->
+    <audio class="audio-febrero">
+        <source src="assets/febrero.mp3" >
+    </audio>
+
+    <!-- AUDIO MARZO -->
+    <audio class="audio-marzo">
+        <source src="assets/marzoC.mp3" >
+    </audio>
+
+    <!-- AUDIO ABRIL -->
+    <audio class="audio-abril">
+        <source src="assets/abril.mp3" >
+    </audio>
+
+    <!-- AUDIO MAYO -->
+    <audio class="audio-mayo">
+        <source src="assets/mayoC.mp3" >
+    </audio>
+
+    <!-- AUDIO JUNIO -->
+    <audio class="audio-junio">
+        <source src="assets/junio.mp3" >
+    </audio>
+
+    <!-- AUDIO JULIO -->
+    <audio class="audio-julio">
+        <source src="assets/julio.mp3" >
+    </audio>
+
+    <!-- AUDIO AGOSTO -->
+    <audio class="audio-agosto">
+        <source src="assets/agosto.mp3" >
+    </audio>
+
+    <!-- AUDIO SEPTIEMBRE -->
+    <audio class="audio-septiembre">
+        <source src="assets/septiembreC.mp3" >
+    </audio>
+
+    <!-- AUDIO OCTUBRE -->
+    <audio class="audio-octubre">
+        <source src="assets/octubreC.mp3" >
+    </audio>
+
+    <!-- AUDIO NOVIEMBRE -->
+    <audio class="audio-noviembre">
+        <source src="assets/noviembreC.mp3" >
+    </audio>
+
+    <!-- AUDIO DICIEMBRE -->
+    <audio class="audio-diciembre">
+        <source src="assets/diciembre.mp3" >
+    </audio>
+    
+    <!-- AUDIO ERROR -->
+    <audio class="audio-wrong">
+        <source src="assets/428320__krzysiunet__low-beep.wav" >
+    </audio>
+	
+	<!-- AUDIO JUEGO FINALIZADO -->
+    <audio class="audio-final-cheer">
+        <source src="assets/alizu_muy_bien.mp3">
+    </audio>
+	
+	<script src="js/manageAudios/manageAudios.js"></script>
+    <script type="text/javascript" src="js/playInstructions/playInstructions.js"></script> 
+    <script type="text/javascript" src="js/finishingModal/finishingModal.js"></script>
+    <script type="text/javascript" src="js/confetti/confetti.js"></script>
+    <script type="text/javascript" src="js/selectPattern/selectPattern.js"></script>
+    <script type="text/javascript" src="js/selectPattern/main.js"></script>
+	<script type="text/javascript" src="js/wordfindgame.js"></script>
+	<script type="text/javascript">
+		var words = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'];
+		var gamePuzzle = wordfindgame.create(words, '#puzzle', '#worlds');
+
+		var puzzle = wordfind.newPuzzle(words, 
+            {
+                height:11, 
+                width:11, 
+                fillBlanks:false
+            });
+		wordfind.print(puzzle);   
+        
+    	$('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+	</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var marco = Array(  '#FF95A4',
+                                '#2074FF',
+                                '#10DA3B',
+                                '#FF0001',
+                                '#708A7C',
+                                '#A84C02',
+                                '#10BCDB',
+                                '#11786B',
+                                '#7221D6',
+                                '#7FFF00',
+                                '#FFD700',
+                                '#00FF7F'
+                            );
+
+            // function colores(marco){
+                // alert(listado);
+            var Total = marco.length;
+            for (i = 0; i < Total; i++) {
+              aleatorio = Math.floor(Math.random()*(marco.length));
+              seleccion = marco[aleatorio];
+              // alert(seleccion);
+              $("#color").attr('value', seleccion);
+              // marco.splice(aleatorio, 1);
+            }
+            marco.splice(aleatorio, 1);
+
+            $("#colorDisponibles").attr('value', marco);
+            // }
+        });
+    </script>
+</body>
+</html>

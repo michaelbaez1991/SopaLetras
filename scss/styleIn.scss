@@ -1,0 +1,594 @@
+@import "../css/css3.css";
+
+.instructions__main {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 11rem;
+    text-align: center;
+}
+
+.instructions__emphasis {
+    display: inline-block; 
+}
+
+.instructions__emphasis span {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #f57f25; 
+}
+
+/*#Playfield {
+    width: 650px;
+    height: 450px;
+    margin-top: 60px;
+    margin-left: -80px;    
+    position: relative;
+}*/
+
+.btn--repeat {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #f57f25;
+    border-radius: 25rem;
+    margin-left: 0px;
+    margin-top: -10px;
+    position: absolute;
+    top: 9%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    border: 2px solid transparent;
+    box-shadow: 3px 3px 5px rgba(145, 148, 151, 0.7);
+    transition: all .2s ease-out;
+}
+
+#Tablero {
+    background: url(../assets/casilla.svg);
+    background-repeat: no-repeat;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.ImagenFond {
+    width:100px;
+    height:100px;
+    background: url(../assets/fondo.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+div div.pic {
+    height: 120px;
+    width: 155px;
+    margin-left: -21px;
+    margin-top: -14px;
+}
+
+.btn--repeat {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #f57f25;
+    border-radius: 25rem;
+    margin-left: 0px;
+    margin-top: -10px;
+    position: absolute;
+    top: 9%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    border: 2px solid transparent;
+    box-shadow: 3px 3px 5px rgba(145, 148, 151, 0.7);
+    transition: all .2s ease-out;
+}
+
+.faile{
+    border-color: #FF0000;
+    box-shadow: 2px 2px 32px 0px #FF0000;
+}
+
+.disableElement{
+    pointer-events:none;
+}
+
+.sucessfullImg{
+    margin-left:-20px;
+}
+
+.finishImg{
+    margin-left:-150px;
+}
+
+.finishDiv{
+    margin-left:-200px;
+    margin-top:150px;
+}
+
+div.down{ 
+    background-image: url(../assets/tarjetasrever.svg);
+    margin: 10px 10px 10px 5px;
+}
+
+div.matched{
+    background-color: green;
+    border:solid 1px rgba(90,9,77,0.1);
+    box-shadow: 2px 2px 32px 0px rgba(0, 141, 0, 1);
+}
+
+div#restart{
+    background-color:black;
+    width:200px;
+    height:25px;
+    border:solid 2px grey;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    padding:10px;
+}
+
+.disableElement{
+    pointer-events:none;
+}
+
+.sucessfullImg{
+    margin-left:-20px;
+}
+
+.finishImg{
+    margin-left:-150px;
+}
+
+.finishDiv{
+    margin-left:-200px;
+    margin-top:150px;
+}
+
+div.two div.pic{
+    background-image: url(../assets/2.svg);
+}
+
+div.three div.pic{
+    background-image: url(../assets/3.svg);
+}
+
+div.four div.pic{
+    background-image: url(../assets/4.svg);
+}
+
+div.five div.pic{
+    background-image: url(../assets/5.svg);
+}
+
+div.six div.pic{
+    background-image: url(../assets/6.svg);
+}
+
+.lists{
+    font-size:14px;
+    font-family:Verdana, Helvetica;
+    font-weight:bold;
+    color:#040404;
+    background:#EAE4E4;
+    border:0px;
+    width:130px;
+    height:19px;
+    margin-right:10px;
+    margin-top:10px;
+    border-radius:8px;
+} 
+
+.lists:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 500px) {
+    #holder {
+        width: 550px;
+        height: 440px;
+        position: absolute;
+        left: 22%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .instructions {
+         margin-top: -35px;
+    }
+
+    .instructions__main {
+        margin-left: 8rem;
+        font-size: 1.8rem;
+    }
+    
+    #Playfield {
+        width: 550px;
+        height: 470px;
+        margin-top: 0px;
+        margin-left: 0%;
+        position: relative;
+    }
+
+    #Tablero {
+        height: 375px;
+        width: 550px;
+        clear: both;
+        background: url(../assets/420X280.svg);
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 2.5%;
+        margin-left: -1%;
+    }
+
+    .puzzleSquare {
+        height: 2.5rem;
+        width: 4.65rem;
+        font: 1.6rem Verdana, Helvetica;
+        /*para Firefox*/
+        -moz-border-radius: 10px 10px 10px 10px;
+        /*para Safari y Chrome*/
+        -webkit-border-radius: 10px 10px 10px 10px;
+    }
+
+    #puzzle {
+        float: left;
+        padding: 0rem;
+        margin-top: 14.5%;
+        margin-left: 4%;
+    }
+
+    #worlds {
+        margin-top: 68%;
+        margin-left: 4%;
+    }
+
+    ul {
+        margin-left: -45px;
+        width: 600px;
+    }
+
+    .btn--repeat {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #f57f25;
+        border-radius: 25rem;
+        margin-left: 6%;
+        margin-top: -2%;
+        position: absolute;
+        top: 9%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        border: 2px solid transparent;
+        box-shadow: 3px 3px 5px rgba(145, 148, 151, 0.7);
+        transition: all .2s ease-out;
+    }
+
+    .modal {
+        left: -11%;
+        width: 120vw;
+        height: 110vh;
+    }
+
+    #puzzle > div {
+        width: 555px;
+        margin: 0 auto;
+    }
+
+    .kid1{
+        margin-left: 40%;
+    }
+
+    .kid2{
+        margin-left: -30%;
+    }
+
+    .lists {
+        width: 120px;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    #holder {
+        width: 600px;
+        height: 470px;
+        position: absolute;
+        left: 23%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    .instructions {
+         margin-top: -35px;
+    }
+
+    .instructions__main {
+        margin-left: 8rem;
+        font-size: 1.8rem;
+        margin-top: 4%;
+    }
+    
+    #Playfield {
+        width: 600px;
+        height: 470px;
+        margin-top: -10px;  
+        margin-left: 0%;
+        position: relative;
+    }
+
+    #Tablero {
+        height: 375px;
+        width: 550px;
+        clear: both;
+        background: url(../assets/420X280.svg);
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+
+    .puzzleSquare {
+        height: 2.5rem;
+        width: 4.65rem;
+        font: 1.6rem Verdana, Helvetica;
+        /*para Firefox*/
+        -moz-border-radius: 10px 10px 10px 10px;
+        /*para Safari y Chrome*/
+        -webkit-border-radius: 10px 10px 10px 10px;
+    }
+
+    #puzzle {
+        float: left;
+        padding: 0rem;
+        margin-top: 14.5%;
+        margin-left: 4%;
+    }
+
+    #worlds {
+        margin-top: 62%;
+        margin-left: 5%;
+    }
+
+    ul {
+        margin-left: -45px;
+        width: 600px;
+    }
+
+    .btn--repeat {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #f57f25;
+        border-radius: 25rem;
+        margin-left: 4%;
+        margin-top: -2%;
+        position: absolute;
+        top: 9%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        border: 2px solid transparent;
+        box-shadow: 3px 3px 5px rgba(145, 148, 151, 0.7);
+        transition: all .2s ease-out;
+    }
+
+    .modal {
+        margin-left: 1.1%;
+        width: 102vw;
+    }
+
+    #puzzle > div {
+        width: 640px;
+        /* height: 800px; */
+        margin: 0 auto;
+    }
+
+    .modal {
+        margin-left: 5%;
+        width: 104vw;
+    }
+
+    .lists {
+        width: 130px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    #holder {
+        margin-left: -2%;
+        width: 750px;
+        height: 560px;
+        position: absolute;
+        left: 48%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    .instructions {
+        margin-top: -25px;
+        margin-left: 2%;
+    }
+
+    .instructions__main {
+        margin-left: 11rem;
+        margin-top: 2%;
+    }
+    
+    #Playfield {
+        width: 600px;
+        height: 490px;
+        margin-top: 2%;
+        margin-left: 55px;
+        position: relative;
+    }
+
+    #Tablero {
+        height: 400px;
+        width: 650px;
+        clear: both;
+        background: url(../assets/500X300.svg);
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .puzzleSquare {
+        height: 2.7rem;
+        width: 5.6rem;
+        font: 1.6rem Verdana, Helvetica;
+        /*para Firefox*/
+        -moz-border-radius: 10px 10px 10px 10px;
+        /*para Safari y Chrome*/
+        -webkit-border-radius: 10px 10px 10px 10px;
+    }
+
+    #puzzle {
+        float: left;
+        padding: 0rem;
+        margin-top: 13%;
+        margin-left: 4%;
+    }
+
+    #worlds {
+        margin-top: 57.3%;
+        margin-left: 11%;
+    }
+
+    ul {
+        margin-left: -45px;
+        width: 600px;
+    }
+
+    .btn--repeat {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #f57f25;
+        border-radius: 25rem;
+        margin-left: 5%;
+        margin-top: -2%;
+        position: absolute;
+        top: 9%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        border: 2px solid transparent;
+        box-shadow: 3px 3px 5px rgba(145, 148, 151, 0.7);
+        transition: all .2s ease-out;
+    }
+
+    #puzzle > div {
+        width: 640px;
+        /* height: 800px; */
+        margin: 0 auto;
+    }
+
+    .modal {
+        margin-left: 6%;
+        width: 102vw;
+    }
+
+    .lists {
+        width: 130px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    #holder {
+        margin-left: 10%;
+        width: 700px;
+        position: absolute;
+        left: 40%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    .instructions {
+        margin-top: -25px;
+        margin-left: 5%;
+    }
+
+    .instructions__main {
+        margin-left: 10rem;
+        margin-top: 2%;
+    }
+
+    #Playfield {
+        width: 600px;
+        height: 490px;
+        margin-top: 2%;
+        margin-left: 20px;
+        position: relative;
+    }
+
+    #Tablero {
+        height: 400px;
+        width: 650px;
+        clear: both;
+        background: url(../assets/500X300.svg);
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-top: 2%;
+        margin-left: 1%;
+    }
+
+    .puzzleSquare {
+        height: 2.7rem;
+        width: 5.6rem;
+        font: 1.6rem Verdana, Helvetica;
+        /*para Firefox*/
+        -moz-border-radius: 10px 10px 10px 10px;
+        /*para Safari y Chrome*/
+        -webkit-border-radius: 10px 10px 10px 10px;
+    }
+
+    #puzzle {
+        float: left;
+        padding: 0rem;
+        margin-top: 13%;
+        margin-left: 3.5%;
+    }
+
+    #worlds {
+        margin-top: 58.5%;
+        margin-left: 12%;
+    }
+
+    ul {
+        margin-left: -58px;
+        width: 600px;
+    }
+
+    .btn--repeat {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #f57f25;
+        border-radius: 25rem;
+        margin-left: 5%;
+        margin-top: -2%;
+        position: absolute;
+        top: 9%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        border: 2px solid transparent;
+        box-shadow: 3px 3px 5px rgba(145, 148, 151, 0.7);
+        transition: all .2s ease-out;
+    }
+
+    #puzzle > div {
+        width: 640px;
+        /* height: 800px; */
+        margin: 0 auto;
+    }
+
+    .modal {
+        margin-left: 8%;
+        width: 102vw;
+    }
+
+    .lists {
+        width: 130px;
+    }
+}
